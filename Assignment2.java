@@ -1,33 +1,66 @@
+import java.util.Scanner;
+
 public class Assignment2 {
-    import java.util.Scanner
     public static void main(String[] args) {
-
-        int = x;
-        int = y;
-        int = rows;
-
-        static Scanner diamond = new Scanner(System.in);
+        Scanner diamond = new Scanner(System.in);
 
         System.out.println("Enter a number:");
-        rows = diamond.nextInt();
+            int rows = diamond.nextInt();
 
-        for(x = 0; x <= rows; x++){
-            for(y = 1; y <= rows - x; y++){
+    if(rows%2 > 0){
+        for(int i = 1; i <= rows / 2 + 1; i++){
+            for(int x = 0; x <= rows - 1 - i; x++){
                 System.out.print(" ");
             }
-            for(y = 1; y <= 2*i-1; y++){
+            for(int x = 1; x <= i * 2 - 1; x++){
                 System.out.print("*");
             }
-            System.out.println("");
+                System.out.println("");
         }
-        for(x = rows - 1; x >=1; i--){
-            for(y = 1; y <= rows - x; y++){
+        for(int i = rows / 2; i >= 1; i--){
+            for(int x = 0; x <= rows - 1 - i; x++){
                 System.out.print(" ");
             }
-            for(y = 1; y <= 2*i-1; y++){
+            for(int x = 1; x<= i * 2 - 1; x++){
                 System.out.print("*");
             }
-            System.out.println("");
+                System.out.println("");
+            }
+        } else {
+        for(int i = 1; i <= rows / 2 + 1; i++){
+            if(i == 1){
+                for(int x = 2; x < rows - i; x++){
+                    System.out.print("  ");
+                }
+                    System.out.print(" * ");
+                    System.out.println("");
+            }else{
+            for(int x = 1; x < rows - i; x++){
+                System.out.print("  ");
+            }
+            for(int x = 2; x < i * 2; x++){
+                System.out.print("* ");
+            }
+                System.out.println("");
+            }
         }
+        for(int i = rows / 2; i >= 1; i--){
+            if(i == 1){
+                for(int x = 2; x < rows - i; x++){
+                    System.out.print("  ");
+                }
+                    System.out.print(" * ");
+                    System.out.println("");
+            }else{
+            for(int x = 2; x <= rows - i; x++){
+                System.out.print("  ");
+            }
+            for(int x = 2; x < i * 2; x++){
+                System.out.print("* ");
+            }
+                System.out.println("");
+        }
+        }
+    }
     }
 }
